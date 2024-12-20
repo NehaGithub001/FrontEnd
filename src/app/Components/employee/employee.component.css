@@ -1,0 +1,61 @@
+.search-input {
+  width: 80%; /* Adjusts width of the input box */
+  padding: 5px; /* Adds padding for a comfortable click area */
+  font-size: 16px; /* Sets the font size */
+  border: 2px solid #007bff; /* Defines a border with color */
+  border-radius: 5px; /* Rounds the edges */
+  outline: none; /* Removes default outline on focus */
+  transition: border-color 0.3s ease-in-out; /* Smooth transition for hover/focus effects */
+}
+
+.sort-btn{
+  background-color: white;
+  border: none;
+  padding: 0px;
+}
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .pagination button {
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+  }
+  
+  .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination span {
+    font-size: 16px;
+  }
+  .modal-title {
+    color: white;
+  }
+
+  .status-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  .status-dot.active {
+    background-color: green;
+  }
+  
+  .status-dot.inactive {
+    background-color: red;
+  }
