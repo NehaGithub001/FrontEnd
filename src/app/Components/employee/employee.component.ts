@@ -62,10 +62,12 @@ export class EmployeeComponent implements OnInit {
     }
   }
 
-  
-
   onSearch(): void {
-    this.filteredEmployeeList = filterList(this.employeeList, this.searchTerm, 'empName');
+    this.filteredEmployeeList = filterList(
+      this.employeeList,
+      this.searchTerm,
+      'empName'
+    );
   }
 
   closeModal() {
@@ -135,9 +137,12 @@ export class EmployeeComponent implements OnInit {
   }
 
   sortColumn(column: keyof Employee, order: 'asc' | 'desc'): void {
-    this.filteredEmployeeList = sortArray(this.filteredEmployeeList, column, order);
+    this.filteredEmployeeList = sortArray(
+      this.filteredEmployeeList,
+      column,
+      order
+    );
   }
-
 
   OnEdit(Employee: Employee) {
     this.openModal();

@@ -1,21 +1,20 @@
 .search-input {
-    width: 80%; /* Adjusts width of the input box */
-    padding: 5px; /* Adds padding for a comfortable click area */
-    font-size: 16px; /* Sets the font size */
-    border: 2px solid #007bff; /* Defines a border with color */
-    border-radius: 5px; /* Rounds the edges */
-    outline: none; /* Removes default outline on focus */
-    transition: border-color 0.3s ease-in-out; /* Smooth transition for hover/focus effects */
-  }
+  width: 80%; /* Adjusts width of the input box */
+  padding: 5px; /* Adds padding for a comfortable click area */
+  font-size: 16px; /* Sets the font size */
+  border: 2px solid #007bff; /* Defines a border with color */
+  border-radius: 5px; /* Rounds the edges */
+  outline: none; /* Removes default outline on focus */
+  transition: border-color 0.3s ease-in-out; /* Smooth transition for hover/focus effects */
+}
 
-  .sort-btn{
-    background-color: white;
-    border: none;
-    padding: 0px;
-  }
+.sort-btn {
+  background-color: white;
+  border: none;
+  padding: 0px;
+}
 
-  .departmentList {
-  
-    margin-left: auto;
-    margin-right: auto;
-  }
+.departmentList {
+  margin-left: auto;
+  margin-right: auto;
+}

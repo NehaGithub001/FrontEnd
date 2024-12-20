@@ -10,37 +10,40 @@ import { filterList } from '../../Utils/filter-utils';
 @Component({
   selector: 'app-department',
   standalone: true,
-  imports: [ReactiveFormsModule,CommonModule,FormsModule,RouterModule],
+  imports: [ReactiveFormsModule, CommonModule, FormsModule, RouterModule],
   templateUrl: './department.component.html',
-  styleUrl: './department.component.css'
+  styleUrl: './department.component.css',
 })
 export class DepartmentComponent {
-departmentist: Department[] = [];
+  departmentist: Department[] = [];
   deptService = inject(DepartmentService);
   filteredDepartmentList: Department[] = []; // List to display after filtering
   searchTerm: string = ''; // For storing user input
 
   ngOnInit(): void {
-
     this.getDepartment();
   }
 
   onSearch(): void {
-    this.filteredDepartmentList = filterList(this.departmentist, this.searchTerm, 'deptName');
+    this.filteredDepartmentList = filterList(
+      this.departmentist,
+      this.searchTerm,
+      'deptName'
+    );
   }
 
-  
+  getDepartment() {
+    this.deptService.getAllDepartments().subscribe((res) => {
+      this.filteredDepartmentList = res.data;
+      this.departmentist = res.data;
+    });
+  }
 
-    getDepartment() {
-      this.deptService.getAllDepartments().subscribe((res) => {
-        this.filteredDepartmentList = res.data; 
-        this.departmentist = res.data;
-      })
-    }
-
-      
-
-      sortColumn(column: keyof Department, order: 'asc' | 'desc'): void {
-        this.filteredDepartmentList = sortArray(this.filteredDepartmentList, column, order);
-      }
+  sortColumn(column: keyof Department, order: 'asc' | 'desc'): void {
+    this.filteredDepartmentList = sortArray(
+      this.filteredDepartmentList,
+      column,
+      order
+    );
+  }
 }
